@@ -1,75 +1,215 @@
+:root { 
+  /* Typography */
+  --main-font: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  --font-weight-500: 500;
+  --line-height-tight: 1.2;
+  --font-size-offset: 0px;
+
+  /* Primary blue colors */
+  --blue-700: hsl(203, 90%, 22%);
+  --blue-600: hsl(203, 85%, 32%);
+  --blue-500: hsl(203, 80%, 42%);
+  --blue-500-ring: hsl(203 80% 42% / 20%);
+  --blue-400: hsl(203, 75%, 52%);
+  --blue-300: hsl(203, 65%, 65%);
+  --blue-200: hsl(203, 60%, 78%);
+  --blue-100: hsl(203, 55%, 90%);
+  --blue-50: hsl(203, 50%, 95%);
+
+  /* Secondary red / alert */
+  --red-700: hsl(4, 75%, 25%);
+  --red-600: hsl(4, 70%, 35%);
+  --red-500: hsl(4, 65%, 45%);
+  --red-400: hsl(4, 60%, 55%);
+  --red-300: hsl(4, 55%, 65%);
+  --red-200: hsl(4, 50%, 75%);
+  --red-100: hsl(4, 45%, 85%);
+
+  /* Accent orange */
+  --orange-700: hsl(30, 80%, 28%);
+  --orange-600: hsl(30, 75%, 38%);
+  --orange-500: hsl(30, 70%, 48%);
+  --orange-400: hsl(30, 65%, 58%);
+  --orange-300: hsl(30, 60%, 68%);
+  --orange-200: hsl(30, 55%, 78%);
+  --orange-100: hsl(30, 50%, 88%);
+
+  /* Accent green */
+  --green-700: hsl(150, 90%, 18%);
+  --green-600: hsl(150, 85%, 28%);
+  --green-500: hsl(150, 80%, 38%);
+  --green-400: hsl(150, 75%, 48%);
+  --green-300: hsl(150, 65%, 60%);
+  --green-200: hsl(150, 55%, 72%);
+  --green-100: hsl(150, 45%, 85%);
+
+  /* Group theme colors */
+  --theme-charcot: #ae4bbd;
+  --theme-classification: #e8b809;
+  --theme-infection: #8db331;
+  --theme-prevention: #e6762c;
+  --theme-pad: #028d8f;
+  --theme-offloading: #009bcb;
+  --theme-wound-healing: #6a77dd;
+
+  /* Neutral / grey */
+  --grey-900: hsl(210, 14%, 9%);
+  --grey-700: hsl(210, 12%, 15%);
+  --grey-600: hsl(210, 10%, 25%);
+  --grey-500: hsl(210, 8%, 40%);
+  --grey-400: hsl(210, 7%, 55%);
+  --grey-300: hsl(210, 6%, 70%);
+  --grey-200: hsl(210, 5%, 80%);
+  --grey-100: hsl(240, 4%, 95%);
+  --grey-50: hsl(210, 5%, 98%);
+
+  /* Backgrounds */
+  --background-color-primary: hsl(0, 0%, 100%);
+  --background-color-secondary: hsl(210, 10%, 97%);
+
+  /* Text */
+  --main-text-color: var(--grey-700);
+  --font-color-card: hsl(0, 0%, 26%);
+
+  /* Notification */
+  --favorite-notification-color: hsl(54, 100%, 60%);
+
+  /* Box Shadows */
+  --shadow-sm: 0 0.125rem 0.25rem hsla(213, 12%, 15%, 0.08);
+  --shadow-md:
+    0 0.25rem 0.75rem hsla(0, 12%, 15%, 0.12), 0 0.125rem 0.25rem hsla(213, 12%, 15%, 0.08);
+  --shadow-lg: 0 0.5rem 1rem hsla(213, 12%, 15%, 0.15), 0 0.25rem 0.5rem hsla(213, 12%, 15%, 0.1);
+
+  @media (prefers-color-scheme: dark) {
+    /* Blue inverted */
+    --blue-700: hsl(203, 90%, 78%);
+    --blue-600: hsl(203, 85%, 68%);
+    --blue-500: hsl(203, 80%, 58%);
+    --blue-500-ring: hsl(203 80% 58% / 30%);
+    --blue-400: hsl(203, 70%, 52%);
+    --blue-300: hsl(203, 60%, 40%);
+    --blue-200: hsl(203, 55%, 28%);
+    --blue-100: hsl(203, 50%, 18%);
+    --blue-50: hsl(203, 50%, 12%);
+
+    /* Red inverted */
+    --red-700: hsl(4, 75%, 78%);
+    --red-600: hsl(4, 70%, 68%);
+    --red-500: hsl(4, 65%, 58%);
+    --red-400: hsl(4, 60%, 50%);
+    --red-300: hsl(4, 55%, 38%);
+    --red-200: hsl(4, 50%, 28%);
+    --red-100: hsl(4, 45%, 20%);
+
+    /* Orange inverted */
+    --orange-700: hsl(30, 80%, 78%);
+    --orange-600: hsl(30, 75%, 66%);
+    --orange-500: hsl(30, 70%, 56%);
+    --orange-400: hsl(30, 65%, 48%);
+    --orange-300: hsl(30, 60%, 38%);
+    --orange-200: hsl(30, 55%, 28%);
+    --orange-100: hsl(30, 50%, 20%);
+
+    /* Green inverted */
+    --green-700: hsl(150, 70%, 75%);
+    --green-600: hsl(150, 70%, 62%);
+    --green-500: hsl(150, 70%, 50%);
+    --green-400: hsl(150, 70%, 40%);
+    --green-300: hsl(150, 65%, 30%);
+    --green-200: hsl(150, 55%, 22%);
+    --green-100: hsl(150, 45%, 16%);
+
+    /* Neutrals inverted */
+    --grey-900: hsl(210, 14%, 95%);
+    --grey-700: hsl(210, 12%, 88%);
+    --grey-600: hsl(210, 10%, 75%);
+    --grey-500: hsl(210, 8%, 60%);
+    --grey-400: hsl(210, 7%, 45%);
+    --grey-300: hsl(210, 6%, 30%);
+    --grey-200: hsl(210, 5%, 22%);
+    --grey-100: hsl(240, 4%, 16%);
+    --grey-50: hsl(210, 5%, 12%);
+
+    --font-color-card: hsl(0, 0%, 87%);
+
+    /* Backgrounds */
+    --background-color-primary: hsl(210, 14%, 9%);
+    --background-color-secondary: hsl(210, 12%, 13%);
+
+    --shadow-sm: 0 0.125rem 0.25rem hsla(0, 0%, 0%, 0.4);
+    --shadow-md: 0 0.25rem 0.75rem hsla(0, 0%, 0%, 0.5), 0 0.125rem 0.25rem hsla(0, 0%, 0%, 0.4);
+    --shadow-lg: 0 0.5rem 1rem hsla(0, 0%, 0%, 0.55), 0 0.25rem 0.5rem hsla(0, 0%, 0%, 0.45);
+  } 
+
+}
+
+* { box-sizing: border-box; margin: 0; }
+
 body {
-  margin: 0;
-  font-family:
-    system-ui,
-    -apple-system,
-    sans-serif;
-  text-align: center;
+  background: var(--background-color-primary);
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+  font-size: calc(1.125rem + var(--font-size-offset));
+  line-height: 1.5;
 }
 
-nav {
-  padding: 1rem;
-  background-color: #282c34;
+main { padding: 1rem 0 3rem 1.4375rem; }
+
+p { margin-top: .375rem; }
+
+h1 {
+  font-size: clamp(2.25rem, 8vw, 3.8rem);
+  line-height: var(--line-height-tight);
 }
 
-nav > a {
+.card {
+  margin-top: 2.625rem;
+  padding: 1.5rem 1.25rem 1.5rem 1rem;
+  border-radius: .5rem;
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  min-width: 22rem;
+}
+
+th, td {
+  padding: 0 1rem;
+  text-align: left;
+  font-weight: 400;
+}
+
+thead th {
+  height: 4.5rem;
+  padding-top: .5rem;
+  font-weight: var(--font-weight-500);
+  border-bottom: 1px solid var(--grey-200);
+}
+
+tbody::before {
+  content: "";
+  display: table-row;
+  height: .75rem;
+}
+
+tbody tr { height: 7rem; }
+tbody tr:nth-child(even) { background: var(--grey-100); }
+tbody th { padding-left: 1.5rem; }
+
+.badge {
   display: inline-block;
-  margin: 0 0.125rem;
-  padding: 0.4rem 0.75rem;
-  border-radius: 0.5rem;
-  color: #93c5fd;
-  font-weight: 600;
-  text-decoration: none;
-  transition:
-    background-color 150ms ease,
-    color 150ms ease;
+  min-width: 5rem;
+  padding: .15rem .75rem;
+  border-radius: .5rem;
+  color: var(--grey-100);
+  text-align: center;
+  line-height: 1.5rem;
 }
 
-nav > a:hover {
-  background-color: rgb(255 255 255 / 10%);
-  color: #dbeafe;
-}
+.yes { background: var(--green-700); }
+.no { background: var(--red-600); }
 
-main {
-  padding: 3rem 1rem;
-}
-
-.logo {
-  animation: logo-spin infinite 20s linear;
-  height: 24vmin;
-  pointer-events: none;
-}
-
-.increment {
-  font-size: 1rem;
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-}
-
-main a {
-  color: #1d5f91;
-  font-weight: 600;
-  text-decoration-color: #7bb6df;
-  text-decoration-thickness: 0.1em;
-  text-underline-offset: 0.2em;
-  transition: color 150ms ease;
-}
-
-main a:hover {
-  color: #123f63;
-}
-
-a:focus-visible {
-  outline: 3px solid #0284c7;
-  outline-offset: 3px;
-  border-radius: 0.2rem;
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

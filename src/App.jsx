@@ -1,7 +1,8 @@
 import { Title } from '@solidjs/meta';
 import { Loading } from 'solid-js';
-import { paths, Router } from './router';
+import { Router } from './router';
 import './App.css';
+
 
 export default function App() {
   return (
@@ -9,10 +10,7 @@ export default function App() {
       {(props) => (
         <>
           <Title>Solid App</Title>
-          <nav>
-            <a href={paths()}>Home</a>
-            <a href={paths.users()}>Users</a>
-          </nav>
+          
           <Loading fallback={<main>Loading…</main>}>{props.children}</Loading>
         </>
       )}

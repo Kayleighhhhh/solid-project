@@ -1,0 +1,9 @@
+{
+  "assessors": ["Assessor 1", "Assessor 2"],
+  "questions": [
+    { "number": 5, "answers": [false, true] },
+    { "number": 6, "answers": [false, true] },
+    { "number": 7, "answers": [false, true] },
+    { "number": 8, "answers": [false, true] }
+  ]
+}

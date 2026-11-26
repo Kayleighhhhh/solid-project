@@ -1,24 +1,42 @@
-import { Title } from '@solidjs/meta';
-import Counter from '../components/Counter';
-import logo from '../logo.svg';
+import { For } from "solid-js";
+import Badge from "../badge";
+import grading from "../data/grading.json";
+
 
 export default function Home() {
   return (
     <main>
-      <Title>Home - Solid App</Title>
-      <img src={logo} class="logo" alt="Solid logo" />
-      <h1>Hello Solid!</h1>
-      <Counter />
-      <p>
-        Edit <code>src/routes/index.tsx</code> and save to reload.
-      </p>
-      <a
-        href="https://v2.solidjs.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn Solid
-      </a>
+      <h1>Compare grading</h1>
+      <p>Compare grades from different assessors side by side</p>
+
+      <div class="card">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Questions</th>
+              <For each={grading.assessors}>
+                {(assessor) => <th scope="col">{assessor}</th>}
+              </For>
+            </tr>
+          </thead>
+          <tbody>
+            <For each={grading.questions}>
+              {(question) => (
+                <tr>
+                  <th scope="row">{question.number}.</th>
+                  <For each={question.answers}>
+                    {(answer) => (
+                      <td>
+                        <Badge answer={answer} />
+                      </td>
+                    )}
+                  </For>
+                </tr>
+              )}
+            </For>
+          </tbody>
+        </table>
+      </div>
     </main>
   );
 }
