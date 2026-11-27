@@ -1,5 +1,5 @@
 import { For } from "solid-js";
-import Badge from "../badge";
+import Badge from "../components/badge";
 import grading from "../data/grading.json";
 
 
@@ -9,7 +9,7 @@ export default function Home() {
       <h1>Compare grading</h1>
       <p>Compare grades from different assessors side by side</p>
 
-      <div class="card">
+      <section class="card">
         <table>
           <thead>
             <tr>
@@ -36,7 +36,7 @@ export default function Home() {
             </For>
           </tbody>
         </table>
-      </div>
+      </section>
     </main>
   );
 }
